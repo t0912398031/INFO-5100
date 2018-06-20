@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Performance">
+  <ClassDiagramComponents>
+    <Class name="Department" package="" visibility="public" xPosition="141.0" yPosition="50.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="calculatePerformance" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Job Position" package="" visibility="public" xPosition="45.0" yPosition="275.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="totalFcultyCost" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Student Directory" package="" visibility="public" xPosition="310.0" yPosition="285.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getTotalStudents" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Student" package="" visibility="public" xPosition="577.0" yPosition="296.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Role" package="" visibility="public" xPosition="45.0" yPosition="446.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Falculty Role" package="" visibility="public" xPosition="327.0" yPosition="446.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Teacher" package="" visibility="public" xPosition="577.0" yPosition="435.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getSalary" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="College" package="" visibility="public" xPosition="468.0" yPosition="40.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="calculateRank" returnType="void" visibility="public"/>
+        <Method name="calculateGrowth" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Falculty Role" target="Role"/>
+    <HasRelation name="department" source="College" target="Department" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="role" source="Job Position" target="Role" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="teacher" source="Falculty Role" target="Teacher" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="student directory" source="Department" target="Student Directory" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="student" source="Student Directory" target="Student" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="position" source="Department" target="Job Position" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ranking">
+  <ClassDiagramComponents>
+    <Class name="Department" package="" visibility="public" xPosition="30.0" yPosition="28.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="calCoursesRank" returnType="void" visibility="public"/>
+        <Method name="determineMoreOrLessCertainCourse" returnType="void" visibility="public"/>
+        <Method name="getTop10percentGraduatesSameCourses" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Course Load" package="" visibility="public" xPosition="328.0" yPosition="482.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Graduated Student" package="" visibility="public" xPosition="30.0" yPosition="237.0">
+      <Fields>
+        <Field name="salary" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPerformance" returnType="void" visibility="public"/>
+        <Method name="calPerformance" returnType="void" visibility="public"/>
+        <Method name="calSalaryGrowth" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Course Offering" package="" visibility="public" xPosition="610.0" yPosition="367.0">
+      <Fields>
+        <Field name="coursePerformance" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calCourseP" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DeptCourseCatlog" package="" visibility="public" xPosition="381.0" yPosition="60.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Course" package="" visibility="public" xPosition="607.0" yPosition="39.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="addCourseOffering" returnType="void" visibility="public"/>
+        <Method name="removeCourseOffering" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Transcript" package="" visibility="public" xPosition="30.0" yPosition="482.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="course load" source="Transcript" target="Course Load" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="course offering" source="Course" target="Course Offering" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="course" source="DeptCourseCatlog" target="Course" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="dept course catlog" source="Department" target="DeptCourseCatlog" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="graduate sutdent" source="Department" target="Graduated Student" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="transcript" source="Graduated Student" target="Transcript" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
